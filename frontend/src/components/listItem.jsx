@@ -10,7 +10,7 @@ const listItem = ({ item, handleCheck, deleteTask, checked, setChecked }) => {
       </label>
       <p className='title'>{item.description}</p>
       <p className='icons'>
-        <span className='trashIcon'><FaTrash onClick={() => deleteTask(item.id)} /></span>
+        <span className='trashIcon' onClick={() => deleteTask(item.id)}><FaTrash /></span>
       </p>
     </li>
   )

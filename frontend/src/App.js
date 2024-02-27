@@ -54,7 +54,7 @@ function App() {
     fetch(`http://localhost:8080/api/todo/delete/${id}`, {
       method: 'DELETE'
     })
-      .then((res) => res.json())
+      .then((res) => { res.json(); fetchItems(); })
       .then(data => console.log(data))
       .catch(error => console.error(error));
   };
@@ -104,7 +104,7 @@ function App() {
     <div className="App">
       <Header title="Todo List" filterItem={filterItem} setFilterItem={setFilterItem} filterList={filterList} toggleFilter={toggleFilter} showFilterField={showFilterField} setShowFilterField={setShowFilterField} />
       <main>
-        {isLoading && <p>Loading Items</p>}
+        {isLoading && <p style={{ textAlign: "center",padding: "10px"}}>Loading Items</p>}
         {isError && <p>{isError}</p>}
         {!isError && !isLoading && (
           <Content
