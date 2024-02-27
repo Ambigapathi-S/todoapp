@@ -1,0 +1,37 @@
+:root {
+    --primary : #0ab6ab;
+    --secondary : #151515;
+    --white : #ffffff;
+    --border : #5c5b5b91;
+    --border-dark : #3d3c3c91;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background: url('../public/images/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    padding: 4rem;
+}
+
